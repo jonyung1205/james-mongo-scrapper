@@ -30,15 +30,14 @@ app.use(express.json());
 // Make public a static folder
 app.use(express.static("public"));
 
-
-// //Set up promises with mongoose
-// mongoose.Promise = global.Promise;
-// // Connect to the Mongo DB
-// mongoose.connect(
-//     process.env.MONGODB_URI ||
-//     "mongodb://user:password@ds245677.mlab.com:45677/heroku_42kts12k", {
-//         useMongoClient: true
-//     });
+//Set up promises with mongoose
+mongoose.Promise = global.Promise;
+// Connect to the Mongo DB
+mongoose.connect(
+    process.env.MONGODB_URI ||
+    "mongodb://user:password@ds245677.mlab.com:45677/heroku_42kts12k", {
+        useMongoClient: true
+    });
 
 // Routes
 
